@@ -1,0 +1,149 @@
+body,
+html {
+	margin: 0;
+	padding: 0;
+	font-family: "PT Sans";
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+.wrapper {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	background-image: url("./public/images/background.png");
+	background-size: cover;
+}
+
+.input-container {
+	border-radius: 10px;
+	background-color: #ffc1c1;
+	width: 80vw;
+	max-height: 85vh;
+	z-index: 1;
+	padding: 2rem;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 1rem;
+	overflow-y: auto;
+}
+
+.main-heading {
+	font-size: 2.2rem;
+	font-weight: lighter;
+	text-align: center;
+	margin: 0;
+}
+
+.subheading {
+	font-size: 1.55rem;
+	font-weight: lighter;
+	text-align: center;
+	text-shadow: 0px 3px 4px #00000060;
+	margin: 0;
+}
+
+.next-button {
+	border-radius: 15px;
+	background-color: #7e5b5b;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	color: white;
+	font-size: 24px;
+	border: none;
+	box-shadow: 0px 4px 4px 0 #00000025;
+	padding: 5px 1.5rem;
+	transition: color 0.5s ease-in-out;
+}
+
+.next-button:hover {
+	transition: color 0.5s ease-in-out;
+	background-color: #7e5b5b98;
+	box-shadow: 0px 4px 4px 0 #00000025;
+}
+
+.arrow {
+	height: 15px;
+	width: 32px;
+	margin-left: 0.8rem;
+}
+
+.inputs-wrapper {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+}
+
+.field-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 90%;
+	margin: 1rem 0;
+}
+
+.input-label {
+	font-size: 1.1rem;
+	margin-right: 8px;
+}
+
+.input-field {
+	border: 2px solid black;
+	border-radius: 4px;
+	padding: 0.5rem 0.8rem;
+	width: 8rem;
+}
+
+.sub-input-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 50%;
+}
+
+.radio-container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 70%;
+	margin: 1rem 0;
+}
+
+.radio-group {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 120px;
+}
+
+.required {
+	color: red;
+	font-size: 1.5rem;
+	margin-left: 5px;
+}
+
+@media (max-width: 900px) {
+	.subheading {
+		margin-top: 18rem;
+	}
+	.inputs-wrapper {
+		flex-direction: column;
+	}
+
+	.field-container {
+		width: 130%;
+	}
+}
