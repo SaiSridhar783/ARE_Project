@@ -74,6 +74,7 @@ function Home() {
 								name="m_i"
 								id="m_i"
 								value={formState.m_i}
+								max={38}
 							>
 								[m<sub>i</sub>]
 							</TextInput>
@@ -94,6 +95,7 @@ function Home() {
 								name="D"
 								id="D"
 								value={formState.D}
+								max={1}
 							/>
 							<TextInput
 								label="Intact Rock Deformation Modulus (MPa)"

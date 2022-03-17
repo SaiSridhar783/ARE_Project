@@ -42,6 +42,7 @@ html {
 	font-weight: lighter;
 	text-align: center;
 	margin: 0;
+	margin-top: 1rem;
 }
 
 .subheading {
@@ -96,14 +97,15 @@ html {
 
 .input-label {
 	font-size: 1.1rem;
-	margin-right: 8px;
+	min-width: 55%;
+	margin-right: 5%;
 }
 
 .input-field {
 	border: 2px solid black;
 	border-radius: 4px;
 	padding: 0.5rem 0.8rem;
-	width: 8rem;
+	min-width: 40%;
 }
 
 .sub-input-wrapper {
@@ -111,7 +113,7 @@ html {
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	width: 50%;
+	width: 48%;
 }
 
 .radio-container {
@@ -132,18 +134,17 @@ html {
 .required {
 	color: red;
 	font-size: 1.5rem;
-	margin-left: 5px;
+	margin-left: 2px;
 }
 
 @media (max-width: 900px) {
 	.subheading {
-		margin-top: 18rem;
+		margin-top: 25vw;
 	}
 	.inputs-wrapper {
 		flex-direction: column;
 	}
-
 	.field-container {
-		width: 130%;
+		width: 150%;
 	}
 }

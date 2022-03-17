@@ -15,6 +15,9 @@ const TextInput = (props) => {
 				onChange={(e) => props.onChangeText(e)}
 				className="input-field"
 				required={props.required}
+				max={props.max}
+				min={0}
+				step=".0001"
 			/>
 		</div>
 	);
