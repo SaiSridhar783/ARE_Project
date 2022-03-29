@@ -149,7 +149,7 @@ const Output = (props) => {
 	const a = utils.calculateA(props.gsi);
 	const s = utils.calulateS(props.gsi, props.D);
 	const scm = utils.calculateScm(props.σci, mb, s, a);
-	const sinsitu = props.uw * props.d;
+	const sinsitu = (props.uw * props.d) / 1000;
 
 	let s3max = 0;
 
