@@ -25,7 +25,7 @@ html {
 	border-radius: 10px;
 	background-color: #ffc1c1;
 	width: 80vw;
-	height: 85vh;
+	height: 80vh;
 	z-index: 1;
 	padding: 2rem;
 	box-sizing: border-box;
@@ -33,7 +33,7 @@ html {
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	margin-bottom: 1rem;
+	margin-bottom: 3rem;
 	overflow-y: auto;
 }
 
@@ -65,7 +65,7 @@ html {
 	border: none;
 	box-shadow: 0px 4px 4px 0 #00000025;
 	padding: 5px 1.5rem;
-	transition: color 0.5s ease-in-out;
+	transition: color 1s ease-in-out;
 }
 
 .next-button:hover {
@@ -118,17 +118,18 @@ html {
 
 .radio-container {
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
 	width: 70%;
-	margin: 1rem 0;
+	margin: 0rem 0;
 }
 
 .radio-group {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	width: 120px;
+	margin-left: 30px;
 }
 
 .required {
@@ -217,3 +218,71 @@ html {
 	padding: 3px 1rem;
 	border-radius: 18px;
 }
+.container {
+	margin-right:auto;
+	margin-left:auto;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	min-height:1vh;
+	width: 75%;
+	background-color: #FF6C6C;
+	font-family: "PT Sans";
+	border-radius: 5px;
+}
+
+.table {
+	width:100%;
+	border:2px solid #ff3e3e;
+	border-radius: 5px;
+}
+
+.table-header {
+	display:flex;
+	width:100%;
+	background:#FF6C6C;
+	padding:(12px * 1.5) 0;
+}
+
+.table-row {
+	display:flex;
+	width:100%;
+	padding:(12px * 1.5) 0;
+}
+
+.table-data, .header__item {
+	flex: 1 1 20%;
+	text-align:center;
+	padding: 13px 0;
+	font-size: 1.1rem;
+}
+
+.header__item {
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+#even {
+     background-color: #ffd1d1;
+}
+#odd {
+	background-color: #ffe0e0;
+}
+.buttons {
+	display: flex;
+	justify-content: space-between;	
+}
+#sub2 {
+        font-size: 2.2rem;
+	}
+	.container2 {
+		margin-right:auto;
+		margin-left:auto;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		min-height:1vh;
+		width: 75%;
+		font-family: "PT Sans";
+		border-radius: 5px;
+		font-size: 5px;
+	}
