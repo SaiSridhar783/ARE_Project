@@ -3,9 +3,11 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import * as utils from "../utils.js";
 import ReactToPrint from "react-to-print";
-import Printpage from "../components/print.jsx";
+import Printpage from "../components/PrintPage";
 
 const Main = (data) => {
+	const componentRef = useRef(null);
+
 	return (
 		<>
 			<Head>
@@ -31,7 +33,7 @@ const Main = (data) => {
 							<div className="table-content">
 								<div className="table-row" id="even">
 									<div className="table-data">
-										Cohesion of Rock mass[Cm]
+										Cohesion of Rock mass [Cm] (MPa)
 									</div>
 									<div className="table-data">
 										{data.data.crm}
@@ -57,7 +59,7 @@ const Main = (data) => {
 								</div>
 								<div className="table-row" id="even">
 									<div className="table-data">
-										UCS of Rock mass
+										UCS of Rock mass (MPa)
 									</div>
 									<div className="table-data">
 										{data.data.ucs}
@@ -70,7 +72,8 @@ const Main = (data) => {
 								</div>
 								<div className="table-row" id="odd">
 									<div className="table-data">
-										Rock mass deformation
+										Rock mass deformation [E<sub>rm</sub>]
+										(MPa)
 									</div>
 									<div className="table-data">
 										{data.data.erm}
@@ -83,7 +86,7 @@ const Main = (data) => {
 								</div>
 								<div className="table-row" id="even">
 									<div className="table-data">
-										Tensile Strength
+										Tensile Strength (MPa)
 									</div>
 									<div className="table-data">
 										{data.data.tens}
@@ -114,14 +117,12 @@ const Main = (data) => {
 							trigger={() => (
 								<button className="next-button">Print</button>
 							)}
-							content={() => data.data.componentRef.current}
+							content={() => componentRef.current}
+							documentTitle="Hoek and Brown Criteria"
 						/>
 					</div>
 					<div style={{ display: "none" }}>
-						<Printpage
-							data={data.data}
-							ref={data.data.componentRef}
-						/>
+						<Printpage data={data.data} ref={componentRef} />
 					</div>
 					<style jsx>
 						{".next-button {font-size: 1rem;margin:0 2%;}"}
@@ -133,7 +134,6 @@ const Main = (data) => {
 };
 
 const Output = (props) => {
-	let componentRef = useRef(null);
 	const router = useRouter();
 	const clickHandler = () => {
 		router.replace({
@@ -190,7 +190,6 @@ const Output = (props) => {
 		tens: tens,
 		phim3: phim3,
 		cm3: cm3,
-		componentRef: componentRef,
 		clickHandler: clickHandler,
 		newvalues: newvalues,
 		...props,
