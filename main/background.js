@@ -1,4 +1,4 @@
-import { app, Menu, MenuItem } from "electron";
+import { app, Menu } from "electron";
 import serve from "electron-serve";
 import { createWindow } from "./helpers";
 

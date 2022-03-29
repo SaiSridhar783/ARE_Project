@@ -27,6 +27,8 @@ function Home() {
 		σ3: query.σ3 || "",
 		gsi: query.gsi || "",
 		application: query.application || "",
+		d: query.d || "",
+		uw: query.uw || "",
 	};
 
 	const [formState, dispatch] = useReducer(formReducer, initialState);
@@ -86,6 +88,14 @@ function Home() {
 								id="gsi"
 								value={formState.gsi}
 							/>
+							<TextInput
+								label="Depth from Surface (m)"
+								required
+								onChangeText={(e) => onChangeText(e)}
+								name="d"
+								id="d"
+								value={formState.d}
+							/>
 						</div>
 						<div className="sub-input-wrapper">
 							<TextInput
@@ -114,6 +124,16 @@ function Home() {
 								value={formState.σ3}
 							>
 								[σ<sub>3</sub>]
+							</TextInput>
+							<TextInput
+								label="Unit Weight of Overburden"
+								onChangeText={(e) => onChangeText(e)}
+								name="uw"
+								id="uw"
+								value={formState.uw}
+								required
+							>
+								[kN/m<sup>3</sup>]
 							</TextInput>
 						</div>
 					</div>

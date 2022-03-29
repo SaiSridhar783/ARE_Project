@@ -65,7 +65,7 @@ export function calculateCohesion(S3n, Sci, mb, s, a) {
 
 export function calculatePHIWithS3(a, mb, S3, Sci, s) {
 	let constant = 1 + a * mb * (s + (mb * S3) / Sci) ** (a - 1);
-	return (Math.asin(constant - 1 / constant + 1) * 180) / Math.PI;
+	return (Math.asin((constant - 1) / (constant + 1)) * 180) / Math.PI;
 }
 
 export function calculateCohesionWithS3(S3, Sci, mb, a, s, phiM) {
