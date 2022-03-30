@@ -1,12 +1,12 @@
 export default {
   body: {
-    margin: '0',
-    padding: '0',
+    margin: 0,
+    padding: 0,
     fontFamily: "'PT Sans'",
   },
   html: {
-    margin: '0',
-    padding: '0',
+    margin: 0,
+    padding: 0,
     fontFamily: "'PT Sans'",
   },
   webkit_scrollbar: {
@@ -19,7 +19,7 @@ export default {
     justifyContent: 'space-between',
     alignItems: 'center',
     position: 'absolute',
-    backgroundImage: "url('./public/images/background.png')",
+    backgroundImage: "url('/images/background.png')",
     backgroundSize: 'cover',
     minHeight: '100vh',
   },
@@ -27,7 +27,7 @@ export default {
     borderRadius: '10px',
     backgroundColor: '#ffc1c1',
     width: '80vw',
-    zIndex: '1',
+    zIndex: 1,
     padding: '2rem',
     boxSizing: 'border-box',
     display: 'flex',
@@ -40,7 +40,7 @@ export default {
     fontSize: '2.2rem',
     fontWeight: 'lighter',
     textAlign: 'center',
-    margin: '0',
+    margin: 0,
     marginTop: '1rem',
   },
   subheading: {
@@ -48,7 +48,7 @@ export default {
     fontWeight: 'lighter',
     textAlign: 'center',
     textShadow: '0px 3px 4px #00000060',
-    margin: '0',
+    margin: 0,
     marginBottom: '20px',
   },
   next_button: {
@@ -63,10 +63,8 @@ export default {
     border: 'none',
     boxShadow: '0px 4px 4px 0 #00000025',
     padding: '5px 1.5rem',
-    transition: 'color 1s ease-in-out',
   },
   next_button_hover: {
-    transition: 'color 0.5s ease-in-out',
     backgroundColor: '#7e5b5b98',
     boxShadow: '0px 4px 4px 0 #00000025',
   },
@@ -166,7 +164,7 @@ export default {
     alignItems: 'center',
     minHeight: '1vh',
     width: '75%',
-    fontFamily: "'PT Sans'",
+    fontFamily: 'PT Sans',
     borderRadius: '5px',
   },
   table: {
@@ -177,12 +175,14 @@ export default {
   table_header: {
     display: 'flex',
     background: '#ff6c6c',
-    padding: '(12px * 1.5) 0',
+    padding: '18px 0',
+    justifyContent: 'space-around',
+    width: '100%',
   },
   table_row: {
     display: 'flex',
     width: '100%',
-    padding: '(12px * 1.5) 0',
+    padding: '0 0',
   },
   table_data: {
     flex: '1 1 20%',
@@ -204,6 +204,8 @@ export default {
     display: 'flex',
     justifyContent: 'space-between',
     padding: '1rem 0',
+    alignItems: 'center',
+    gap: "2rem"
   },
   sub2: {
     fontSize: '2.2rem',

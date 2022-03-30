@@ -4,8 +4,7 @@ import { useRouter } from 'next/router'
 import * as utils from '../utils.js'
 import ReactToPrint from 'react-to-print'
 import Printpage from '../components/PrintPage'
-import style from '../style.js'
-
+import styles from '../style.js'
 
 const Main = (data) => {
   const componentRef = useRef(null)
@@ -15,70 +14,72 @@ const Main = (data) => {
       <Head>
         <title>ARE Project - Hoek and Brown Criteria</title>
       </Head>
-      <div className="wrapper">
-        <h1 className="main-heading">Hoek and Brown Failure Criteria</h1>
-        <div className="input-container">
-          <h3 className="subheading" id="sub2">
+      <div style={styles.wrapper}>
+        <h1 style={styles.main_heading}>Hoek and Brown Failure Criteria</h1>
+        <div style={styles.input_container}>
+          <h3 style={styles.subheading} id="sub2">
             Result
           </h3>
-          <div className="container" style={{ flexDirection: 'column' }}>
-            <div className="table">
-              <div className="table-header">
-                <div className="header__item">Name</div>
-                <div className="header__item">Without σ3</div>
-                {data.data.σ3 && <div className="header__item">With σ3</div>}
+          <div style={styles.container}>
+            <div style={styles.table}>
+              <div style={styles.table_header}>
+                <div style={styles.header__item}>Name</div>
+                <div style={styles.header__item}>Without σ3</div>
+                {data.data.σ3 && <div style={styles.header__item}>With σ3</div>}
               </div>
-              <div className="table-content">
-                <div className="table-row" id="even">
-                  <div className="table-data">
+              <div style={styles.table_content}>
+                <div style={styles.table_row} id="even">
+                  <div style={styles.table_data}>
                     Cohesion of Rock mass [Cm] (MPa)
                   </div>
-                  <div className="table-data">{data.data.crm}</div>
+                  <div style={styles.table_data}>{data.data.crm}</div>
                   {data.data.σ3 && (
-                    <div className="table-data">{data.data.cm3}</div>
+                    <div style={styles.table_data}>{data.data.cm3}</div>
                   )}
                 </div>
-                <div className="table-row" id="odd">
-                  <div className="table-data">Friction angle of Rock mass</div>
-                  <div className="table-data">{data.data.frm}°</div>
+                <div style={styles.table_row} id="odd">
+                  <div style={styles.table_data}>
+                    Friction angle of Rock mass
+                  </div>
+                  <div style={styles.table_data}>{data.data.frm}°</div>
                   {data.data.σ3 && (
-                    <div className="table-data">{data.data.phim3}°</div>
+                    <div style={styles.table_data}>{data.data.phim3}°</div>
                   )}
                 </div>
-                <div className="table-row" id="even">
-                  <div className="table-data">UCS of Rock mass (MPa)</div>
-                  <div className="table-data">{data.data.ucs}</div>
+                <div style={styles.table_row} id="even">
+                  <div style={styles.table_data}>UCS of Rock mass (MPa)</div>
+                  <div style={styles.table_data}>{data.data.ucs}</div>
                   {data.data.σ3 && (
-                    <div className="table-data">{data.data.ucs}</div>
+                    <div style={styles.table_data}>{data.data.ucs}</div>
                   )}
                 </div>
-                <div className="table-row" id="odd">
-                  <div className="table-data">
+                <div style={styles.table_row} id="odd">
+                  <div style={styles.table_data}>
                     Rock mass deformation [E<sub>rm</sub>] (MPa)
                   </div>
-                  <div className="table-data">{data.data.erm}</div>
+                  <div style={styles.table_data}>{data.data.erm}</div>
                   {data.data.σ3 && (
-                    <div className="table-data">{data.data.erm}</div>
+                    <div style={styles.table_data}>{data.data.erm}</div>
                   )}
                 </div>
-                <div className="table-row" id="even">
-                  <div className="table-data">Tensile Strength (MPa)</div>
-                  <div className="table-data">{data.data.tens}</div>
+                <div style={styles.table_row} id="even">
+                  <div style={styles.table_data}>Tensile Strength (MPa)</div>
+                  <div style={styles.table_data}>{data.data.tens}</div>
                   {data.data.σ3 && (
-                    <div className="table-data">{data.data.tens}</div>
+                    <div style={styles.table_data}>{data.data.tens}</div>
                   )}
                 </div>
               </div>
             </div>
-            <div className="buttons">
-              <button className="next-button" onClick={data.data.clickHandler}>
+            <div style={styles.buttons}>
+              <button className="next_button" onClick={data.data.clickHandler}>
                 Modify Values
               </button>
-              <button className="next-button" onClick={data.data.newvalues}>
+              <button className="next_button" onClick={data.data.newvalues}>
                 Enter New Values
               </button>
               <ReactToPrint
-                trigger={() => <button className="next-button">Print</button>}
+                trigger={() => <button className="next_button">Print</button>}
                 content={() => componentRef.current}
                 documentTitle="Hoek and Brown Criteria"
               />
@@ -87,7 +88,31 @@ const Main = (data) => {
           <div style={{ display: 'none' }}>
             <Printpage data={data.data} ref={componentRef} />
           </div>
-          <style jsx>{'.next-button {font-size: 1rem;margin:0 2%;}'}</style>
+          <style jsx>{`
+            .next_button {
+              border-radius: 15px;
+              background-color: #7e5b5b;
+              box-sizing: border-box;
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              color: white;
+              border: none;
+              box-shadow: 0px 4px 4px 0 #00000025;
+              padding: 5px 1.5rem;
+              font-size: 1rem;
+              margin: 0 2%;
+            }
+            #sub2 {
+              font-size: 2.2rem!important;
+            }
+            #even {
+              background-color: #ffd1d1;
+            }
+            #odd {
+              background-color: #ffe0e0;
+            }
+          `}</style>
         </div>
       </div>
     </>
