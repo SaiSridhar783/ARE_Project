@@ -3,11 +3,11 @@ import React from "react";
 const Printpage = React.forwardRef((props, ref) => {
 	return (
 		<div className="container2" ref={ref}>
-			<h3 className="subheading" id="sub2">
+			<h3 className="subheading" id="sub2" style={{marginTop: "-1px"}}>
 				Input
 			</h3>
-			<div className="table" style={{ border: "1px black" }}>
-				<div className="table-header" style={{ background: "white" }}>
+			<div className="table">
+				<div className="table-header">
 					<div className="header__item">Name</div>
 					<div className="header__item">Values</div>
 				</div>
@@ -60,11 +60,11 @@ const Printpage = React.forwardRef((props, ref) => {
 					</div>
 				</div>
 			</div>
-			<h3 className="subheading" id="sub2">
+			<h3 className="subheading" id="sub2" style={{marginTop: "50px"}}>
 				Output
 			</h3>
-			<div className="table" style={{ border: "1px black" }}>
-				<div className="table-header" style={{ background: "white" }}>
+			<div className="table">
+				<div className="table-header">
 					<div className="header__item">Name</div>
 					<div className="header__item">Without σ3</div>
 					<div className="header__item">With σ3</div>
