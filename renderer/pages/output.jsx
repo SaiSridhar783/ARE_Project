@@ -4,6 +4,8 @@ import { useRouter } from 'next/router'
 import * as utils from '../utils.js'
 import ReactToPrint from 'react-to-print'
 import Printpage from '../components/PrintPage'
+import style from '../style.js'
+
 
 const Main = (data) => {
   const componentRef = useRef(null)

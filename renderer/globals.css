@@ -179,7 +179,6 @@ html {
   align-items: center;
   min-height: 1vh;
   width: 75%;
-  /* background-color: #ff6c6c; */
   font-family: 'PT Sans';
   border-radius: 5px;
 }
@@ -192,7 +191,6 @@ html {
 
 .table-header {
   display: flex;
-  /*width: 100%;*/
   background: #ff6c6c;
   padding: (12px * 1.5) 0;
 }
@@ -233,9 +231,9 @@ html {
   margin-right: auto;
   margin-left: auto;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content:flex-start;
   align-items: center;
-  min-height: 1vh;
   width: 75%;
   font-family: 'PT Sans';
   border-radius: 5px;

@@ -2,6 +2,7 @@ import React, { useReducer } from "react";
 import Head from "next/head";
 import TextInput from "../components/TextInput";
 import { useRouter } from "next/dist/client/router";
+import styles from "../style";
 
 const formReducer = (state, action) => {
 	switch (action.type) {
@@ -51,14 +52,14 @@ function Home() {
 			<Head>
 				<title>ARE Project - Hoek and Brown Criteria</title>
 			</Head>
-			<div className="wrapper">
-				<h1 className="main-heading">
+			<div style={styles.wrapper}>
+				<h1 style={styles.main_heading}>
 					Hoek and Brown Failure Criteria
 				</h1>
-				<form className="input-container" onSubmit={submitHandler}>
-					<h3 className="subheading">Fill the details below</h3>
-					<div className="inputs-wrapper">
-						<div className="sub-input-wrapper">
+				<form style={styles.input_container} onSubmit={submitHandler}>
+					<h3 style={styles.subheading}>Fill the details below</h3>
+					<div style={styles.inputs_wrapper}>
+						<div style={styles.sub_input_wrapper}>
 							<TextInput
 								label="UCS of intact rock (MPa)"
 								required
@@ -97,7 +98,7 @@ function Home() {
 								value={formState.d}
 							/>
 						</div>
-						<div className="sub-input-wrapper">
+						<div style={styles.sub_input_wrapper}>
 							<TextInput
 								label="Distubance Factor [D]"
 								required
@@ -137,9 +138,9 @@ function Home() {
 							</TextInput>
 						</div>
 					</div>
-					<div className="radio-container">
+					<div style={styles.radio_container}>
 						<h4>Choose the Application: </h4>
-						<div className="radio-group">
+						<div style={styles.radio_group}>
 							<label htmlFor="tunnel">Deep Tunnels</label>
 							<input
 								type="radio"
@@ -150,7 +151,7 @@ function Home() {
 								onChange={(e) => onChangeText(e)}
 							/>
 						</div>
-						<div className="radio-group">
+						<div style={styles.radio_group}>
 							<label htmlFor="slope">Slope</label>
 							<input
 								type="radio"
@@ -162,12 +163,12 @@ function Home() {
 							/>
 						</div>
 					</div>
-					<button className="next-button" type="submit">
+					<button style={styles.next_button} type="submit">
 						Next
 						<img
 							src="/images/Arrow.png"
 							alt="next"
-							className="arrow"
+							style={styles.arrow}
 						/>
 					</button>
 				</form>
