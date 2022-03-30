@@ -83,6 +83,9 @@ const template = [
 			{
 				label: "Learn More",
 			},
+			{
+				label: "toggleDevTools",
+			}
 		],
 	},
 ];
