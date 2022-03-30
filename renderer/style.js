@@ -42,6 +42,7 @@ export default {
     textAlign: 'center',
     margin: 0,
     marginTop: '1rem',
+    fontFamily: 'PT Sans',
   },
   subheading: {
     fontSize: '1.55rem',
@@ -50,6 +51,7 @@ export default {
     textShadow: '0px 3px 4px #00000060',
     margin: 0,
     marginBottom: '20px',
+    fontFamily: 'PT Sans',
   },
   next_button: {
     borderRadius: '15px',
@@ -64,10 +66,7 @@ export default {
     boxShadow: '0px 4px 4px 0 #00000025',
     padding: '5px 1.5rem',
   },
-  next_button_hover: {
-    backgroundColor: '#7e5b5b98',
-    boxShadow: '0px 4px 4px 0 #00000025',
-  },
+
   arrow: {
     height: '15px',
     width: '32px',
@@ -117,6 +116,7 @@ export default {
     alignItems: 'center',
     width: '120px',
     marginLeft: '30px',
+    fontFamily: 'PT Sans',
   },
   required: {
     color: 'red',
@@ -205,7 +205,7 @@ export default {
     justifyContent: 'space-between',
     padding: '1rem 0',
     alignItems: 'center',
-    gap: "2rem"
+    gap: '2rem',
   },
   sub2: {
     fontSize: '2.2rem',

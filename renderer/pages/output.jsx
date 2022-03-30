@@ -97,14 +97,18 @@ const Main = (data) => {
               justify-content: space-around;
               align-items: center;
               color: white;
+              font-size: 1rem;
               border: none;
               box-shadow: 0px 4px 4px 0 #00000025;
               padding: 5px 1.5rem;
-              font-size: 1rem;
-              margin: 0 2%;
+              cursor: pointer;
+            }
+            .next_button:hover {
+              background-color: #7e5b5b98;
+              box-shadow: '0px 4px 4px 0 #00000025';
             }
             #sub2 {
-              font-size: 2.2rem!important;
+              font-size: 2.2rem !important;
             }
             #even {
               background-color: #ffd1d1;
