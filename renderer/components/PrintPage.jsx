@@ -2,10 +2,10 @@ import React from 'react'
 import styles from '../style'
 
 const Printpage = React.forwardRef((props, ref) => {
-	console.log(props)
+  console.log(props)
   return (
     <div style={styles.container2} ref={ref}>
-      <h3 style={{...styles.subheading, marginTop: '-1px'}} id="sub2" >
+      <h3 style={{ ...styles.subheading, marginTop: '-1px' }} id="sub2">
         Input
       </h3>
       <div style={styles.table}>
@@ -54,7 +54,7 @@ const Printpage = React.forwardRef((props, ref) => {
           </div>
         </div>
       </div>
-      <h3 style={{...styles.subheading, marginTop: '50px'}} id="sub2" >
+      <h3 style={{ ...styles.subheading, marginTop: '50px' }} id="sub2">
         Output
       </h3>
       <div style={styles.table}>
@@ -66,28 +66,38 @@ const Printpage = React.forwardRef((props, ref) => {
         <div style={styles.table_content}>
           <div style={styles.table_row}>
             <div style={styles.table_data}>Cohesion of Rock mass[Cm]</div>
-            <div style={styles.table_data}>1</div>
-            {props.data.σ3 && <div style={styles.table_data}>0</div>}
+            <div style={styles.table_data}>{props.data.crm}</div>
+            {props.data.σ3 && (
+              <div style={styles.table_data}>{props.data.cm3}</div>
+            )}
           </div>
           <div style={styles.table_row}>
             <div style={styles.table_data}>Friction angle of Rock mass</div>
-            <div style={styles.table_data}>2</div>
-            {props.data.σ3 && <div style={styles.table_data}>1</div>}
+            <div style={styles.table_data}>{props.data.frm}°</div>
+            {props.data.σ3 && (
+              <div style={styles.table_data}>{props.data.phim3}°</div>
+            )}
           </div>
           <div style={styles.table_row}>
             <div style={styles.table_data}>UCS of Rock mass</div>
-            <div style={styles.table_data}>3</div>
-            {props.data.σ3 && <div style={styles.table_data}>2</div>}
+            <div style={styles.table_data}>{props.data.ucs}</div>
+            {props.data.σ3 && (
+              <div style={styles.table_data}>{props.data.ucs}</div>
+            )}
           </div>
           <div style={styles.table_row}>
             <div style={styles.table_data}>Rock mass deformation</div>
-            <div style={styles.table_data}>4</div>
-            {props.data.σ3 && <div style={styles.table_data}>2</div>}
+            <div style={styles.table_data}>{props.data.erm}</div>
+            {props.data.σ3 && (
+              <div style={styles.table_data}>{props.data.erm}</div>
+            )}
           </div>
           <div style={styles.table_row}>
             <div style={styles.table_data}>Tensile Strength</div>
-            <div style={styles.table_data}>5</div>
-            {props.data.σ3 && <div style={styles.table_data}>2</div>}
+            <div style={styles.table_data}>{props.data.tens}</div>
+            {props.data.σ3 && (
+              <div style={styles.table_data}>{props.data.tens}</div>
+            )}
           </div>
         </div>
       </div>
