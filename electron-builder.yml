@@ -2,11 +2,13 @@ appId: com.nextron.hoekandbrown
 productName: Hoek and Brown parameters
 copyright: Copyright © 2018 Yoshihide Shiono
 directories:
-  output: dist
-  buildResources: resources
+    output: dist
+    buildResources: resources
 files:
-  - from: .
-    filter:
-      - package.json
-      - app
-publish: null
+    - from: .
+      filter:
+          - package.json
+          - app
+win:
+    publish:
+        - github
