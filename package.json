@@ -38,8 +38,8 @@
 					"name": "@electron-forge/publisher-github",
 					"config": {
 						"repository": {
-							"owner": "shadow",
-							"name": "hoek-brown-parameters"
+							"owner": "SaiSridhar783",
+							"name": "ARE_Project"
 						}
 					}
 				}
@@ -50,8 +50,8 @@
 		"publish": [
 			{
 				"provider": "github",
-				"owner": "shadow",
-				"repo": "hoek-brown-parameters"
+				"owner": "SaiSridhar783",
+				"repo": "ARE_Project"
 			}
 		]
 	}
