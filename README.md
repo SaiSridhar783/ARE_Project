@@ -1,38 +1,7 @@
-<p align="center"><img src="https://i.imgur.com/X7dSE68.png"></p>
+## Applied Rock Engineering Project
 
-## Usage
+This program allows you to find the parameters of rock mass based on the latest reasearch of Hoek and Brown.
 
-### Create an App
+You can compare the values in presence and absence of confining stress.
 
-```
-# with npx
-$ npx create-nextron-app my-app --example with-javascript
-
-# with yarn
-$ yarn create nextron-app my-app --example with-javascript
-
-# with pnpx
-$ pnpx create-nextron-app my-app --example with-javascript
-```
-
-### Install Dependencies
-
-```
-$ cd my-app
-
-# using yarn or npm
-$ yarn (or `npm install`)
-
-# using pnpm
-$ pnpm install --shamefully-hoist
-```
-
-### Use it
-
-```
-# development mode
-$ yarn dev (or `npm run dev` or `pnpm run dev`)
-
-# production build
-$ yarn build (or `npm run build` or `pnpm run build`)
-```
+_The program was built using Nextron (NextJS integrated into electron) and has been compiled for windows and linux operating systems._
