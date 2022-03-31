@@ -1,8 +1,8 @@
 {
 	"private": true,
-	"name": "are_project",
+	"name": "Hoek-and-Brown",
 	"description": "Program to calculate Hoek-Brown Parameters",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"author": "Shadow",
 	"main": "app/background.js",
 	"scripts": {
@@ -53,6 +53,9 @@
 				"owner": "SaiSridhar783",
 				"repo": "ARE_Project"
 			}
-		]
+		],
+		"win": {
+			"icon": "resources/icon.ico"
+		}
 	}
 }
