@@ -8,7 +8,7 @@
 	"scripts": {
 		"dev": "nextron",
 		"build": "nextron build",
-		"publish": "nextron publish",
+		"publish": "electron-builder --win -p always",
 		"postinstall": "electron-builder install-app-deps",
 		"lint": "next lint"
 	},
@@ -45,5 +45,14 @@
 				}
 			]
 		}
+	},
+	"build": {
+		"publish": [
+			{
+				"provider": "github",
+				"owner": "shadow",
+				"repo": "hoek-brown-parameters"
+			}
+		]
 	}
 }
