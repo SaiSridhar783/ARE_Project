@@ -35,7 +35,7 @@ export default {
     justifyContent: 'space-around',
     alignItems: 'center',
     marginBottom: '3rem',
-    minHeight: '80vh'
+    minHeight: '80vh',
   },
   main_heading: {
     fontSize: '2.2rem',
